@@ -9,12 +9,12 @@ services:
     init: true
     tty: true
     volumes:
+      - type: volume
+        source: node_modules
+        target: /usr/src/app/node_modules
       - type: bind
         source: ./app
         target: /usr/src/app
-      - type: bind
-        source: ./app/node_modules
-        target: /usr/src/app/node_modules
 volumes:
   node_modules:
   
